@@ -3,74 +3,218 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Новости</title>
+  <title>Новости - Экономический факультет</title>
   <link rel="stylesheet" href="../style/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<div id="header">ХЭДЕР</div>
-<div id="menu">
-  <ul>
-    <li><a href="../index.html">Главная</a></li>
-    <li><a href="news.html" class="active">Новости</a></li>
-    <li><a href="practices.html">Практики</a></li>
-    <li><a href="goods.html">Товары</a></li>
-    <li><a href="contacts.html">Контакты</a></li>
-  </ul>
-</div>
-<div id="content">
-  <h2>Новости экономического факультета</h2>
-  
-  <div class="news-item">
-    <h2 class="news-title">Запуск новой магистерской программы по цифровой экономике</h2>
-    <div class="news-meta">Дата: 15.03.2025 14:30, Автор: П.В. Астафьев</div>
-    <div class="news-content">
-      <p>С сентября 2025 года на факультете экономики НИУ ВШЭ стартует новая магистерская программа "Цифровая трансформация и анализ данных". Программа разработана совместно с ведущими IT-компаниями и включает уникальные курсы по блокчейн-технологиям, анализу больших данных в экономике и цифровым платформам.</p>
-      <p>Особенностью программы станет проектное обучение: студенты будут работать над реальными кейсами от компаний-партнеров. Уже подтверждено участие специалистов из Сбербанка, Яндекс и Тинькофф в качестве приглашенных лекторов.</p>
+  <header class="site-header">
+    <div class="container">
+      <h1>Новости экономики</h1>
+      <p>Актуальные события и исследования РТУ МИРЭА</p>
     </div>
-  </div>
-  
-  <div class="news-item">
-    <h2 class="news-title">Студенты ВШЭ заняли первое место на Всероссийской олимпиаде по эконометрике</h2>
-    <div class="news-meta">Дата: 10.03.2025 11:45, Автор: П.В. Остафьев</div>
-    <div class="news-content">
-      <p>Команда студентов магистратуры экономического факультета НИУ ВШЭ одержала победу на XV Всероссийской олимпиаде по эконометрике и анализу данных, которая прошла в Санкт-Петербурге с 5 по 8 марта 2025 года.</p>
-      <p>В соревновании участвовали 32 команды из ведущих вузов России. Студенты ВШЭ показали лучшие результаты в решении практических кейсов по прогнозированию экономических показателей с использованием методов машинного обучения. Особенно жюри отметило работу команды в анализе влияния климатических изменений на сельскохозяйственные рынки.</p>
-      <p>Победители получили приглашения на стажировки в Центральный банк РФ и Министерство экономического развития.</p>
-    </div>
-  </div>
-  
-  <div class="news-item">
-    <h2 class="news-title">Открытие лаборатории экспериментальной экономики</h2>
-    <div class="news-meta">Дата: 05.03.2025 16:20, Автор: П.В. Естафьев</div>
-    <div class="news-content">
-      <p>1 марта 2025 года состоялось официальное открытие новой лаборатории экспериментальной экономики на экономическом факультете НИУ ВШЭ. Лаборатория оснащена современным оборудованием для проведения поведенческих экспериментов и eye-tracking исследований.</p>
-      <p>Основные направления работы лаборатории:</p>
-      <ul>
-        <li>Исследование принятия экономических решений в условиях неопределенности</li>
-        <li>Анализ поведения потребителей на цифровых платформах</li>
-        <li>Эксперименты в области поведенческих финансов</li>
-        <li>Изучение эффективности разных форм экономических стимулов</li>
+  </header>
+
+  <nav class="main-nav">
+    <div class="nav-container">
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a></li>
+        <li class="nav-item"><a href="news.html" class="nav-link active"><i class="fas fa-newspaper"></i> Новости</a></li>
+        <li class="nav-item"><a href="practices.html" class="nav-link"><i class="fas fa-briefcase"></i> Практики</a></li>
+        <li class="nav-item"><a href="goods.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Товары</a></li>
+        <li class="nav-item"><a href="contacts.html" class="nav-link"><i class="fas fa-address-book"></i> Контакты</a></li>
       </ul>
-      <p>Лаборатория открыта для студентов магистратуры и аспирантов, желающих проводить собственные исследования. Уже запланированы первые эксперименты по изучению эффективности "зеленых" налоговых стимулов для бизнеса.</p>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <header class="page-header">
+      <h2>Последние новости</h2>
+      <p>Самые свежие события из мира экономики и образования</p>
+    </header>
+
+    <div class="news-grid grid">
+      <article class="news-card card">
+        <div class="news-header">
+          <h3 class="news-title">Запуск новой магистерской программы по цифровой экономике</h3>
+          <div class="news-meta">
+            <span><i class="far fa-calendar"></i> 15.03.2025</span>
+            <span><i class="far fa-user"></i> П.В. Астафьев</span>
+          </div>
+        </div>
+        <div class="news-content">
+          <p>С сентября 2025 года на факультете экономики РТУ МИРЭА стартует новая магистерская программа "Цифровая трансформация и анализ данных".</p>
+          <p>Программа разработана совместно с ведущими IT-компаниями и включает уникальные курсы по блокчейн-технологиям, анализу больших данных в экономике и цифровым платформам.</p>
+        </div>
+        <div class="news-tags">
+          <span class="tag tag-primary">Образование</span>
+          <span class="tag">Экономика</span>
+          <span class="tag">Технологии</span>
+        </div>
+      </article>
+
+      <article class="news-card card">
+        <div class="news-header">
+          <h3 class="news-title">Студенты РТУ МИРЭА заняли первое место на Всероссийской олимпиаде по эконометрике</h3>
+          <div class="news-meta">
+            <span><i class="far fa-calendar"></i> 10.03.2025</span>
+            <span><i class="far fa-user"></i> П.В. Остафьев</span>
+          </div>
+        </div>
+        <div class="news-content">
+          <p>Команда студентов магистратуры экономического факультета РТУ МИРЭА одержала победу на XV Всероссийской олимпиаде по эконометрике и анализу данных.</p>
+          <p>Студенты РТУ МИРЭА показали лучшие результаты в решении практических кейсов по прогнозированию экономических показателей с использованием методов машинного обучения.</p>
+        </div>
+        <div class="news-tags">
+          <span class="tag tag-primary">Достижения</span>
+          <span class="tag">Наука</span>
+          <span class="tag">Образование</span>
+        </div>
+      </article>
+
+      <article class="news-card card">
+        <div class="news-header">
+          <h3 class="news-title">Открытие лаборатории экспериментальной экономики</h3>
+          <div class="news-meta">
+            <span><i class="far fa-calendar"></i> 05.03.2025</span>
+            <span><i class="far fa-user"></i> П.В. Естафьев</span>
+          </div>
+        </div>
+        <div class="news-content">
+          <p>1 марта 2025 года состоялось официальное открытие новой лаборатории экспериментальной экономики на экономическом факультете РТУ МИРЭА.</p>
+          <p>Лаборатория оснащена современным оборудованием для проведения поведенческих экспериментов и eye-tracking исследований.</p>
+        </div>
+        <div class="news-tags">
+          <span class="tag tag-primary">Наука</span>
+          <span class="tag">Инновации</span>
+          <span class="tag">Исследования</span>
+        </div>
+      </article>
+
+      <article class="news-card card">
+        <div class="news-header">
+          <h3 class="news-title">Международная конференция "Экономика в эпоху искусственного интеллекта"</h3>
+          <div class="news-meta">
+            <span><i class="far fa-calendar"></i> 28.02.2025</span>
+            <span><i class="far fa-user"></i> П.В. Астафьев</span>
+          </div>
+        </div>
+        <div class="news-content">
+          <p>20-22 мая 2025 года в Москве пройдет международная конференция "Экономика в эпоху искусственного интеллекта: вызовы и возможности".</p>
+          <p>Организаторами выступают РТУ МИРЭА, МГУ и MIT. В конференции примут участие ведущие экономисты мира, включая нобелевских лауреатов.</p>
+        </div>
+        <div class="news-tags">
+          <span class="tag tag-primary">Конференция</span>
+          <span class="tag">ИИ</span>
+          <span class="tag">Международное сотрудничество</span>
+        </div>
+      </article>
+    </div>
+
+    <aside class="card mt-4">
+      <h3><i class="fas fa-rss"></i> Подписка на новости</h3>
+      <p>Будьте в курсе всех событий! Подпишитесь на нашу рассылку.</p>
+      <div class="form-group mt-2">
+        <input type="email" id="subscriptionEmail" class="form-control" placeholder="Введите ваш email">
+      </div>
+      <button class="btn btn-primary mt-2" onclick="handleSubscription(event)">Подписаться</button>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-info">
+        <h3>Экономические новости</h3>
+        <p>РТУ МИРЭА | Экономический факультет</p>
+        <p>© 2025 Все права защищены</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html" class="footer-link">Главная</a>
+        <a href="contacts.html" class="footer-link">Контакты</a>
+        <a href="#" class="footer-link">Архив новостей</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Материалы предоставлены пресс-службой РТУ МИРЭА</p>
+    </div>
+  </footer>
+
+  <!-- Модальное окно успешной подписки -->
+  <div class="modal" id="subscriptionModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Подписка оформлена!</h3>
+        <button class="modal-close" onclick="closeModal('subscriptionModal')">&times;</button>
+      </div>
+      <div class="modal-body subscription-success">
+        <i class="fas fa-envelope-open-text"></i>
+        <h4>Спасибо за подписку!</h4>
+        <p>Теперь вы будете первыми узнавать о самых важных новостях РТУ МИРЭА.</p>
+        <p>Письмо с подтверждением отправлено на ваш email.</p>
+        <button class="btn btn-primary mt-3" onclick="closeModal('subscriptionModal')">Продолжить чтение</button>
+      </div>
     </div>
   </div>
-  
-  <div class="news-item">
-    <h2 class="news-title">Международная конференция "Экономика в эпоху искусственного интеллекта"</h2>
-    <div class="news-meta">Дата: 28.02.2025 09:15, Автор: П.В. Астафьев</div>
-    <div class="news-content">
-      <p>20-22 мая 2025 года в Москве пройдет международная конференция "Экономика в эпоху искусственного интеллекта: вызовы и возможности". Организаторами выступают НИУ ВШЭ, МГУ и MIT.</p>
-      <p>В конференции примут участие ведущие экономисты мира, включая нобелевских лауреатов Эстер Дюфло и Майкла Кремера. Основные темы для обсуждения:</p>
-      <ul>
-        <li>Влияние ИИ на рынок труда и перераспределение профессий</li>
-        <li>Этические аспекты использования алгоритмов в экономике</li>
-        <li>Цифровые валюты и будущее денежной системы</li>
-        <li>ИИ в государственном управлении и публичной политике</li>
-      </ul>
-      <p>Для студентов магистратуры предусмотрены гранты на участие и специальная молодежная секция с возможностью представить свои исследования. Регистрация открыта до 15 апреля 2025 года.</p>
-    </div>
-  </div>
-</div>
-<div id="footer">ФУТЕР</div>
+
+  <script>
+    // Функции для работы с модальными окнами
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Закрытие модального окна при клике вне его содержимого
+    document.addEventListener('DOMContentLoaded', function() {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        modal.addEventListener('click', function(e) {
+          if (e.target === this) {
+            this.classList.remove('active');
+            document.body.style.overflow = 'auto';
+          }
+        });
+      });
+
+      // Закрытие по клавише Esc
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          modals.forEach(modal => {
+            if (modal.classList.contains('active')) {
+              modal.classList.remove('active');
+              document.body.style.overflow = 'auto';
+            }
+          });
+        }
+      });
+    });
+
+    // Функция для обработки подписки на новости
+    function handleSubscription(e) {
+      e.preventDefault();
+      
+      const emailInput = document.querySelector('#subscriptionEmail');
+      if (emailInput && emailInput.value) {
+        setTimeout(() => {
+          openModal('subscriptionModal');
+          emailInput.value = ''; // Очищаем поле ввода
+        }, 1000);
+      } else {
+        alert('Пожалуйста, введите email для подписки');
+      }
+      
+      return false;
+    }
+  </script>
 </body>
 </html>
