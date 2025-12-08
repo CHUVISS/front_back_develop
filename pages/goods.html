@@ -4,292 +4,406 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Товары - Учебные материалы</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="../style/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <header class="site-header">
+<body class="d-flex flex-column min-vh-100">
+  <div class="content-wrapper">
+    <div class="container-fluid p-0">
+      <!-- Header -->
+      <header class="bg-primary text-white py-4">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col">
+              <h1 class="h3 mb-1">Учебные материалы</h1>
+              <p class="mb-0 opacity-75">Качественные ресурсы для студентов РТУ МИРЭА</p>
+            </div>
+            <div class="col-auto">
+              <span class="badge bg-light text-primary">МИРЭА</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">
+                  <i class="bi bi-house me-1"></i> Главная
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="news.html">
+                  <i class="bi bi-newspaper me-1"></i> Новости
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="practices.html">
+                  <i class="bi bi-briefcase me-1"></i> Практики
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="goods.html">
+                  <i class="bi bi-cart me-1"></i> Товары
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacts.html">
+                  <i class="bi bi-telephone me-1"></i> Контакты
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="container my-4">
+        <!-- Header Section -->
+        <section class="mb-5 text-center">
+          <h2 class="text-primary mb-3">Каталог учебных материалов</h2>
+          <p class="text-muted">Книги, курсы и ресурсы для успешного обучения в РТУ МИРЭА</p>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="mb-5">
+          <div class="row g-4">
+            <!-- Product 1 -->
+            <div class="col-lg-3 col-md-6">
+              <div class="card h-100 shadow-sm card-hover product-card" onclick="selectProductCard(this)">
+                <img src="../images/goods1.jpg" class="card-img-top product-img" alt="Эконометрика">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Эконометрика: современный подход</h5>
+                  <p class="card-text flex-grow-1">Полное руководство по современным методам эконометрического анализа с примерами на R и Python.</p>
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="h5 text-danger mb-0">2 500 ₽</span>
+                    <div class="text-muted small">
+                      <i class="bi bi-file-pdf"></i> PDF
+                    </div>
+                  </div>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-primary" onclick="addToCart(1, event)">
+                      <i class="bi bi-cart me-1"></i> Купить
+                    </button>
+                    <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#productModal1">
+                      <i class="bi bi-eye me-1"></i> Предпросмотр
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 2 (Sale) -->
+            <div class="col-lg-3 col-md-6">
+              <div class="card h-100 shadow-sm card-hover product-card position-relative" onclick="selectProductCard(this)">
+                <div class="sale-badge">СКИДКА</div>
+                <img src="../images/goods2.jpg" class="card-img-top product-img" alt="Анализ данных">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Анализ данных в экономике</h5>
+                  <p class="card-text flex-grow-1">Практический курс по анализу экономических данных с использованием Python и библиотек pandas, numpy.</p>
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                      <span class="h5 text-danger mb-0">3 200 ₽</span>
+                      <small class="text-muted text-decoration-line-through ms-2">4 000 ₽</small>
+                    </div>
+                    <div class="text-muted small">
+                      <i class="bi bi-camera-video"></i> Видео
+                    </div>
+                  </div>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-primary" onclick="addToCart(2, event)">
+                      <i class="bi bi-cart me-1"></i> Купить
+                    </button>
+                    <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#productModal2">
+                      <i class="bi bi-eye me-1"></i> Предпросмотр
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-lg-3 col-md-6">
+              <div class="card h-100 shadow-sm card-hover product-card" onclick="selectProductCard(this)">
+                <img src="../images/goods3.jpg" class="card-img-top product-img" alt="Машинное обучение">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Машинное обучение для экономистов</h5>
+                  <p class="card-text flex-grow-1">Специализированный курс по применению ML в экономических исследованиях и прогнозировании.</p>
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="h5 text-danger mb-0">4 500 ₽</span>
+                    <div class="text-muted small">
+                      <i class="bi bi-bar-chart"></i> Кейсы
+                    </div>
+                  </div>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-primary" onclick="addToCart(3, event)">
+                      <i class="bi bi-cart me-1"></i> Купить
+                    </button>
+                    <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#productModal3">
+                      <i class="bi bi-eye me-1"></i> Предпросмотр
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-lg-3 col-md-6">
+              <div class="card h-100 shadow-sm card-hover product-card" onclick="selectProductCard(this)">
+                <img src="../images/goods4.jpg" class="card-img-top product-img" alt="Научные статьи">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Сборник научных статей</h5>
+                  <p class="card-text flex-grow-1">Коллекция из 50 лучших статей по экономике 2024 года с комментариями профессоров РТУ МИРЭА.</p>
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="h5 text-danger mb-0">1 800 ₽</span>
+                    <div class="text-muted small">
+                      <i class="bi bi-globe"></i> Английский
+                    </div>
+                  </div>
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-primary" onclick="addToCart(4, event)">
+                      <i class="bi bi-cart me-1"></i> Купить
+                    </button>
+                    <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#productModal4">
+                      <i class="bi bi-eye me-1"></i> Предпросмотр
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Special Offer -->
+        <section class="mb-5">
+          <div class="card shadow-sm border-primary">
+            <div class="card-body">
+              <h4 class="card-title text-primary mb-3">
+                <i class="bi bi-percent me-2"></i>
+                Специальное предложение для студентов РТУ МИРЭА
+              </h4>
+              <p class="card-text">
+                При покупке двух любых материалов - третий в подарок! Акция действует до 30 апреля 2025 года. 
+                Для получения скидки укажите номер студенческого билета при оформлении заказа.
+              </p>
+              <div class="mt-3">
+                <span class="badge bg-primary me-2">Акция</span>
+                <span class="badge bg-success me-2">Скидка</span>
+                <span class="badge bg-warning">Ограниченное время</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 footer-wrapper">
     <div class="container">
-      <h1>Учебные материалы</h1>
-      <p>Качественные ресурсы для студентов-экономистов РТУ МИРЭА</p>
-    </div>
-  </header>
-
-  <nav class="main-nav">
-    <div class="nav-container">
-      <ul class="nav-menu">
-        <li class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a></li>
-        <li class="nav-item"><a href="news.html" class="nav-link"><i class="fas fa-newspaper"></i> Новости</a></li>
-        <li class="nav-item"><a href="practices.html" class="nav-link"><i class="fas fa-briefcase"></i> Практики</a></li>
-        <li class="nav-item"><a href="goods.html" class="nav-link active"><i class="fas fa-shopping-cart"></i> Товары</a></li>
-        <li class="nav-item"><a href="contacts.html" class="nav-link"><i class="fas fa-address-book"></i> Контакты</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main class="main-content">
-    <header class="page-header">
-      <h2>Каталог учебных материалов</h2>
-      <p>Книги, курсы и ресурсы для успешного обучения в РТУ МИРЭА</p>
-    </header>
-
-    <div class="products-grid grid">
-      <article class="product-card">
-        <img src="../images/goods1.jpg" alt="Эконометрика" class="product-image">
-        <h3 class="product-name">Эконометрика: современный подход</h3>
-        <p class="product-description">Полное руководство по современным методам эконометрического анализа с примерами на R и Python. Разработано преподавателями РТУ МИРЭА.</p>
-        <div class="product-price">2 500 ₽</div>
-        <div class="product-meta mb-2">
-          <span><i class="far fa-file-pdf"></i> PDF + Excel файлы</span>
-          <span><i class="far fa-clock"></i> 450 страниц</span>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h5 class="mb-2">Учебные материалы</h5>
+          <p class="mb-0 small">Институт перспективных технологий и индустриального программирования | РТУ МИРЭА</p>
+          <p class="mb-0 small text-white-50">&copy; 2025 Все права защищены</p>
         </div>
-        <div class="product-actions">
-          <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Купить</button>
-          <button class="btn btn-secondary" onclick="openModal('productModal1')"><i class="far fa-eye"></i> Предпросмотр</button>
+        <div class="col-md-6 text-md-end">
+          <a href="../index.html" class="text-white text-decoration-none me-3">Главная</a>
+          <a href="contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+          <a href="#" class="text-white text-decoration-none">Условия использования</a>
         </div>
-      </article>
-
-      <article class="product-card">
-        <img src="../images/goods2.jpg" alt="Анализ данных" class="product-image">
-        <h3 class="product-name">Анализ данных в экономике</h3>
-        <p class="product-description">Практический курс по анализу экономических данных с использованием Python и библиотек pandas, numpy. Авторский курс РТУ МИРЭА.</p>
-        <div class="product-price">3 200 ₽</div>
-        <div class="product-meta mb-2">
-          <span><i class="fas fa-video"></i> 15 видеоуроков</span>
-          <span><i class="fas fa-laptop-code"></i> Jupyter notebooks</span>
-        </div>
-        <div class="product-actions">
-          <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Купить</button>
-          <button class="btn btn-secondary" onclick="openModal('productModal2')"><i class="far fa-eye"></i> Предпросмотр</button>
-        </div>
-      </article>
-
-      <article class="product-card">
-        <img src="../images/goods3.jpg" alt="Машинное обучение" class="product-image">
-        <h3 class="product-name">Машинное обучение для экономистов</h3>
-        <p class="product-description">Специализированный курс по применению ML в экономических исследованиях и прогнозировании. Разработан совместно с ИТ-отделом РТУ МИРЭА.</p>
-        <div class="product-price">4 500 ₽</div>
-        <div class="product-meta mb-2">
-          <span><i class="fas fa-chart-line"></i> 10 кейсов</span>
-          <span><i class="fas fa-database"></i> Датасеты</span>
-        </div>
-        <div class="product-actions">
-          <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Купить</button>
-          <button class="btn btn-secondary" onclick="openModal('productModal3')"><i class="far fa-eye"></i> Предпросмотр</button>
-        </div>
-      </article>
-
-      <article class="product-card">
-        <img src="../images/goods4.jpg" alt="Научные статьи" class="product-image">
-        <h3 class="product-name">Сборник научных статей</h3>
-        <p class="product-description">Коллекция из 50 лучших статей по экономике 2024 года с комментариями профессоров РТУ МИРЭА и анализом методологии.</p>
-        <div class="product-price">1 800 ₽</div>
-        <div class="product-meta mb-2">
-          <span><i class="far fa-file-alt"></i> 50 статей</span>
-          <span><i class="fas fa-globe"></i> На английском</span>
-        </div>
-        <div class="product-actions">
-          <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Купить</button>
-          <button class="btn btn-secondary" onclick="openModal('productModal4')"><i class="far fa-eye"></i> Предпросмотр</button>
-        </div>
-      </article>
-    </div>
-
-    <section class="card mt-4">
-      <h3><i class="fas fa-percentage"></i> Специальное предложение для студентов РТУ МИРЭА</h3>
-      <p>При покупке двух любых материалов - третий в подарок! Акция действует до 30 апреля 2025 года. Для получения скидки укажите номер студенческого билета при оформлении заказа.</p>
-      <div class="mt-2">
-        <span class="tag tag-primary">Акция</span>
-        <span class="tag">Скидка</span>
-        <span class="tag">Ограниченное время</span>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-info">
-        <h3>Учебные материалы</h3>
-        <p>РТУ МИРЭА | Экономический факультет</p>
-        <p>© 2025 Все права защищены</p>
+      <div class="row mt-3">
+        <div class="col-12 text-center">
+          <p class="small text-white-50 mb-0">Цифровые товары. Мгновенная доставка после оплаты. Официальные материалы РТУ МИРЭА</p>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="../index.html" class="footer-link">Главная</a>
-        <a href="contacts.html" class="footer-link">Контакты</a>
-        <a href="#" class="footer-link">Условия использования</a>
-      </div>
-    </div>
-    <div class="copyright">
-      <p>Цифровые товары. Мгновенная доставка после оплаты. Официальные материалы РТУ МИРЭА</p>
     </div>
   </footer>
 
-  <!-- Модальное окно товара 1 -->
-  <div class="modal" id="productModal1">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title">Эконометрика: современный подход</h3>
-        <button class="modal-close" onclick="closeModal('productModal1')">&times;</button>
-      </div>
-      <div class="modal-body">
-        <img src="../images/goods1.jpg" alt="Эконометрика" class="product-modal-image">
-        <h4>Подробное описание:</h4>
-        <p>Это полное руководство по современным методам эконометрического анализа с практическими примерами на R и Python. Книга разработана ведущими преподавателями РТУ МИРЭА и включает:</p>
-        <ul>
-          <li>Основы эконометрики и статистики</li>
-          <li>Регрессионный анализ и временные ряды</li>
-          <li>Панельные данные и методы машинного обучения</li>
-          <li>Практические кейсы с реальными данными</li>
-          <li>Код на R и Python для всех примеров</li>
-        </ul>
-        <div class="product-price">2 500 ₽</div>
-        <div class="product-meta mb-3">
-          <span><i class="far fa-file-pdf"></i> PDF + Excel файлы</span>
-          <span><i class="far fa-clock"></i> 450 страниц</span>
-          <span><i class="fas fa-download"></i> Мгновенная доставка</span>
+  <!-- Кнопка переключения темы -->
+  <div class="theme-switcher">
+    <button class="theme-switcher-btn" id="themeToggle">
+      <i class="bi bi-moon" id="themeIcon"></i>
+    </button>
+  </div>
+
+  <!-- Product Modals -->
+  
+  <!-- Modal Product 1 -->
+  <div class="modal fade" id="productModal1" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Эконометрика: современный подход</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-        <button class="btn btn-primary w-100">
-          <i class="fas fa-shopping-cart"></i> Добавить в корзину
-        </button>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="../images/goods1.jpg" class="img-fluid rounded modal-product-img" alt="Эконометрика">
+            </div>
+            <div class="col-md-6">
+              <h6 class="text-primary mb-3">Подробное описание:</h6>
+              <p>Это полное руководство по современным методам эконометрического анализа с практическими примерами на R и Python.</p>
+              <ul class="mb-3">
+                <li>Основы эконометрики и статистики</li>
+                <li>Регрессионный анализ и временные ряды</li>
+                <li>Панельные данные и методы машинного обучения</li>
+                <li>Практические кейсы с реальными данными</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="h4 text-danger">2 500 ₽</span>
+                <span class="badge bg-primary"><i class="bi bi-file-pdf"></i> PDF формат</span>
+              </div>
+              <button class="btn btn-primary w-100" onclick="addToCart(1)">
+                <i class="bi bi-cart me-2"></i> Добавить в корзину
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Модальное окно товара 2 -->
-  <div class="modal" id="productModal2">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title">Анализ данных в экономике</h3>
-        <button class="modal-close" onclick="closeModal('productModal2')">&times;</button>
-      </div>
-      <div class="modal-body">
-        <img src="../images/goods2.jpg" alt="Анализ данных" class="product-modal-image">
-        <h4>Подробное описание:</h4>
-        <p>Практический курс по анализу экономических данных с использованием Python. Авторский курс РТУ МИРЭА включает:</p>
-        <ul>
-          <li>15 видеоуроков с подробными объяснениями</li>
-          <li>Рабочие Jupyter notebooks</li>
-          <li>Практические задания с проверкой</li>
-          <li>Доступ к закрытому чату с автором</li>
-          <li>Сертификат о завершении курса</li>
-        </ul>
-        <div class="product-price">3 200 ₽</div>
-        <div class="product-meta mb-3">
-          <span><i class="fas fa-video"></i> 15 видеоуроков</span>
-          <span><i class="fas fa-laptop-code"></i> Jupyter notebooks</span>
-          <span><i class="fas fa-certificate"></i> Сертификат</span>
+  <!-- Modal Product 2 -->
+  <div class="modal fade" id="productModal2" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Анализ данных в экономике</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-        <button class="btn btn-primary w-100">
-          <i class="fas fa-shopping-cart"></i> Добавить в корзину
-        </button>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="../images/goods2.jpg" class="img-fluid rounded modal-product-img" alt="Анализ данных">
+            </div>
+            <div class="col-md-6">
+              <h6 class="text-primary mb-3">Подробное описание:</h6>
+              <p>Практический курс по анализу экономических данных с использованием Python. Авторский курс РТУ МИРЭА.</p>
+              <ul class="mb-3">
+                <li>15 видеоуроков с подробными объяснениями</li>
+                <li>Рабочие Jupyter notebooks</li>
+                <li>Практические задания с проверкой</li>
+                <li>Доступ к закрытому чату с автором</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                  <span class="h4 text-danger">3 200 ₽</span>
+                  <small class="text-muted text-decoration-line-through ms-2">4 000 ₽</small>
+                </div>
+                <span class="badge bg-success"><i class="bi bi-camera-video"></i> Видеокурс</span>
+              </div>
+              <button class="btn btn-primary w-100" onclick="addToCart(2)">
+                <i class="bi bi-cart me-2"></i> Добавить в корзину
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Модальное окно товара 3 -->
-  <div class="modal" id="productModal3">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title">Машинное обучение для экономистов</h3>
-        <button class="modal-close" onclick="closeModal('productModal3')">&times;</button>
-      </div>
-      <div class="modal-body">
-        <img src="../images/goods3.jpg" alt="Машинное обучение" class="product-modal-image">
-        <h4>Подробное описание:</h4>
-        <p>Специализированный курс по применению машинного обучения в экономических исследованиях и прогнозировании. Разработан совместно с ИТ-отделом РТУ МИРЭА:</p>
-        <ul>
-          <li>10 реальных кейсов из экономической практики</li>
-          <li>Наборы данных для тренировки моделей</li>
-          <li>Методы оценки эффективности моделей</li>
-          <li>Интеграция ML-моделей в бизнес-процессы</li>
-          <li>Проектная работа с ментором</li>
-        </ul>
-        <div class="product-price">4 500 ₽</div>
-        <div class="product-meta mb-3">
-          <span><i class="fas fa-chart-line"></i> 10 кейсов</span>
-          <span><i class="fas fa-database"></i> Датасеты</span>
-          <span><i class="fas fa-users"></i> Поддержка ментора</span>
+  <!-- Modal Product 3 -->
+  <div class="modal fade" id="productModal3" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Машинное обучение для экономистов</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-        <button class="btn btn-primary w-100">
-          <i class="fas fa-shopping-cart"></i> Добавить в корзину
-        </button>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="../images/goods3.jpg" class="img-fluid rounded modal-product-img" alt="Машинное обучение">
+            </div>
+            <div class="col-md-6">
+              <h6 class="text-primary mb-3">Подробное описание:</h6>
+              <p>Специализированный курс по применению машинного обучения в экономических исследованиях и прогнозировании.</p>
+              <ul class="mb-3">
+                <li>10 реальных кейсов из экономической практики</li>
+                <li>Наборы данных для тренировки моделей</li>
+                <li>Методы оценки эффективности моделей</li>
+                <li>Проектная работа с ментором</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="h4 text-danger">4 500 ₽</span>
+                <span class="badge bg-info"><i class="bi bi-bar-chart"></i> Практические кейсы</span>
+              </div>
+              <button class="btn btn-primary w-100" onclick="addToCart(3)">
+                <i class="bi bi-cart me-2"></i> Добавить в корзину
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Модальное окно товара 4 -->
-  <div class="modal" id="productModal4">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title">Сборник научных статей</h3>
-        <button class="modal-close" onclick="closeModal('productModal4')">&times;</button>
-      </div>
-      <div class="modal-body">
-        <img src="../images/goods4.jpg" alt="Научные статьи" class="product-modal-image">
-        <h4>Подробное описание:</h4>
-        <p>Коллекция из 50 лучших статей по экономике 2024 года с комментариями профессоров РТУ МИРЭА и анализом методологии:</p>
-        <ul>
-          <li>Статьи из топовых экономических журналов</li>
-          <li>Подробные комментарии по методологии</li>
-          <li>Анализ воспроизводимости результатов</li>
-          <li>Критические разборы методологических подходов</li>
-          <li>Рекомендации по применению методов в собственных исследованиях</li>
-        </ul>
-        <div class="product-price">1 800 ₽</div>
-        <div class="product-meta mb-3">
-          <span><i class="far fa-file-alt"></i> 50 статей</span>
-          <span><i class="fas fa-globe"></i> На английском</span>
-          <span><i class="fas fa-graduation-cap"></i> Для исследователей</span>
+  <!-- Modal Product 4 -->
+  <div class="modal fade" id="productModal4" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Сборник научных статей</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
-        <button class="btn btn-primary w-100">
-          <i class="fas fa-shopping-cart"></i> Добавить в корзину
-        </button>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="../images/goods4.jpg" class="img-fluid rounded modal-product-img" alt="Научные статьи">
+            </div>
+            <div class="col-md-6">
+              <h6 class="text-primary mb-3">Подробное описание:</h6>
+              <p>Коллекция из 50 лучших статей по экономике 2024 года с комментариями профессоров РТУ МИРЭА и анализом методологии.</p>
+              <ul class="mb-3">
+                <li>Статьи из топовых экономических журналов</li>
+                <li>Подробные комментарии по методологии</li>
+                <li>Анализ воспроизводимости результатов</li>
+                <li>Рекомендации по применению методов</li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="h4 text-danger">1 800 ₽</span>
+                <span class="badge bg-warning"><i class="bi bi-globe"></i> На английском</span>
+              </div>
+              <button class="btn btn-primary w-100" onclick="addToCart(4)">
+                <i class="bi bi-cart me-2"></i> Добавить в корзину
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/theme-switcher.js"></script>
   <script>
-    // Функции для работы с модальными окнами
-    function openModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+    // Функция добавления в корзину
+    function addToCart(productId, event = null) {
+      if (event) {
+        event.stopPropagation();
       }
+      alert(`Товар ${productId} добавлен в корзину!`);
     }
 
-    function closeModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-      }
+    // Функция выбора карточки товара
+    function selectProductCard(card) {
+      // Удаляем класс selected у всех карточек
+      document.querySelectorAll('.product-card').forEach(c => {
+        c.classList.remove('selected');
+      });
+      // Добавляем класс selected к выбранной карточке
+      card.classList.add('selected');
     }
-
-    // Закрытие модального окна при клике вне его содержимого
-    document.addEventListener('DOMContentLoaded', function() {
-      const modals = document.querySelectorAll('.modal');
-      modals.forEach(modal => {
-        modal.addEventListener('click', function(e) {
-          if (e.target === this) {
-            this.classList.remove('active');
-            document.body.style.overflow = 'auto';
-          }
-        });
-      });
-
-      // Закрытие по клавише Esc
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-          modals.forEach(modal => {
-            if (modal.classList.contains('active')) {
-              modal.classList.remove('active');
-              document.body.style.overflow = 'auto';
-            }
-          });
-        }
-      });
-    });
   </script>
 </body>
 </html>

@@ -4,192 +4,264 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Главная - Портфолио</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="style/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Портфолио студента</h1>
-      <p>ЭФБО-07-24 | РТУ МИРЭА</p>
-    </div>
-  </header>
-
-  <nav class="main-nav">
-    <div class="nav-container">
-      <ul class="nav-menu">
-        <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Главная</a></li>
-        <li class="nav-item"><a href="pages/news.html" class="nav-link"><i class="fas fa-newspaper"></i> Новости</a></li>
-        <li class="nav-item"><a href="pages/practices.html" class="nav-link"><i class="fas fa-briefcase"></i> Практики</a></li>
-        <li class="nav-item"><a href="pages/goods.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Товары</a></li>
-        <li class="nav-item"><a href="pages/contacts.html" class="nav-link"><i class="fas fa-address-book"></i> Контакты</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main class="main-content">
-    <header class="page-header">
-      <h2>Профиль студента</h2>
-      <p>Ознакомьтесь с моими достижениями, навыками и опытом</p>
-    </header>
-
-    <section class="profile-section card">
-      <div class="profile-image" onclick="openModal('photoModal')" style="cursor: pointer;">
-        <img src="images/photo.png" alt="Фото Чувилова Александра" class="profile-img">
-        <div style="margin-top: 10px; font-size: 0.9rem; color: #666;">
-          <i class="fas fa-search-plus"></i> Нажмите для увеличения
-        </div>
-      </div>
-      <article class="profile-info">
-        <h1 class="profile-name">Чувилов Александр Александрович</h1>
-        <div class="profile-meta">
-          <span><i class="fas fa-graduation-cap"></i> Магистратура РТУ МИРЭА</span>
-          <span><i class="fas fa-users"></i> ЭФБО-07-24</span>
-          <span><i class="fas fa-map-marker-alt"></i> Москва, Россия</span>
-        </div>
-            <div class="profile-bio">
-                <p><strong>Учусь в РТУ МИРЭА.</strong> Студент 1 курса магистратуры по направлению "Экономика". Специализация - анализ данных и эконометрика в цифровой экономике. В настоящее время изучаю методы машинного обучения для экономических прогнозов.</p>
-                <p>Активно участвую в студенческих проектах, организую семинары по анализу данных. В свободное время занимаюсь спортивным ориентированием и увлекаюсь фотографией.</p>
-                <p class="highlight">В будущем планирую развивать карьеру в области экономического консалтинга с фокусом на digital-трансформации компаний.</p>
+<body class="d-flex flex-column min-vh-100">
+  <div class="content-wrapper">
+    <div class="container-fluid p-0">
+      <!-- Header -->
+      <header class="bg-primary text-white py-4">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col">
+              <h1 class="h3 mb-1">Портфолио студента</h1>
+              <p class="mb-0 opacity-75">ЭФБО-07-24 | РТУ МИРЭА</p>
             </div>
-      </article>
-    </section>
+            <div class="col-auto">
+              <span class="badge bg-light text-primary">МИРЭА</span>
+            </div>
+          </div>
+        </div>
+      </header>
 
-    <section class="card">
-      <h2 class="mb-3"><i class="fas fa-code"></i> Профессиональные навыки</h2>
-      <div class="skills-grid grid-4">
-        <article class="skill-card">
-          <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-          <div>
-            <h3>Анализ данных</h3>
-            <p>Python, R, SQL, Tableau</p>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">
+                  <i class="bi bi-house me-1"></i> Главная
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/news.html">
+                  <i class="bi bi-newspaper me-1"></i> Новости
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/practices.html">
+                  <i class="bi bi-briefcase me-1"></i> Практики
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/goods.html">
+                  <i class="bi bi-cart me-1"></i> Товары
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/contacts.html">
+                  <i class="bi bi-telephone me-1"></i> Контакты
+                </a>
+              </li>
+            </ul>
           </div>
-        </article>
-        <article class="skill-card">
-          <div class="skill-icon"><i class="fas fa-calculator"></i></div>
-          <div>
-            <h3>Эконометрика</h3>
-            <p>STATA, EViews, моделирование</p>
-          </div>
-        </article>
-        <article class="skill-card">
-          <div class="skill-icon"><i class="fas fa-language"></i></div>
-          <div>
-            <h3>Языки</h3>
-            <p>Русский (носитель), Английский (C1)</p>
-          </div>
-        </article>
-        <article class="skill-card">
-          <div class="skill-icon"><i class="fas fa-users"></i></div>
-          <div>
-            <h3>Управление</h3>
-            <p>Командная работа, лидерство</p>
-          </div>
-        </article>
-      </div>
-    </section>
+        </div>
+      </nav>
 
-    <section class="card">
-      <h2 class="mb-3"><i class="fas fa-briefcase"></i> Опыт работы</h2>
-      <div class="timeline">
-        <article class="timeline-item">
-          <h3>Аналитик данных</h3>
-          <p class="mb-1"><strong>Центральный банк РФ</strong> | июнь 2024 - август 2024</p>
-          <p>Анализ финансовой устойчивости банков, разработка моделей прогнозирования рисков, подготовка аналитических отчетов для руководства.</p>
-        </article>
-        <article class="timeline-item">
-          <h3>Экономист-исследователь</h3>
-          <p class="mb-1"><strong>РТУ МИРЭА, Лаборатория экономических исследований</strong> | сентябрь 2023 - май 2024</p>
-          <p>Участие в проекте по оценке эффективности государственных программ поддержки малого бизнеса, сбор и анализ данных, подготовка научных публикаций.</p>
-        </article>
-        <article class="timeline-item">
-          <h3>Стажер в отделе стратегии</h3>
-          <p class="mb-1"><strong>Сбербанк России</strong> | июль 2023 - август 2023</p>
-          <p>Анализ рынка цифровых банковских услуг, исследование потребительского поведения, подготовка презентаций для руководства департамента.</p>
-        </article>
-      </div>
-    </section>
-  </main>
+      <!-- Main Content -->
+      <main class="container my-4">
+        <!-- Profile Section -->
+        <section class="mb-5">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div class="row align-items-center">
+                <div class="col-md-3 text-center mb-3 mb-md-0">
+                  <img src="images/photo.png" alt="Фото Чувилова Александра" 
+                       class="img-fluid rounded-circle card-img-profile border border-3 border-primary"
+                       data-bs-toggle="modal" data-bs-target="#photoModal">
+                  <p class="text-muted small mt-2">
+                    <i class="bi bi-search me-1"></i>Нажмите для увеличения
+                  </p>
+                </div>
+                <div class="col-md-9">
+                  <h2 class="card-title h4 text-primary">Чувилов Александр Александрович</h2>
+                  <p class="card-text text-muted mb-2">
+                    <i class="bi bi-bookmark-check-fill text-primary me-1"></i>
+                    Студент группы ЭФБО-07-24
+                  </p>
+                  <p class="card-text">
+                    Институт перспективных технологий и индустриального программирования
+                  </p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="badge bg-primary">Анализ данных</span>
+                    <span class="badge bg-success">Эконометрика</span>
+                    <span class="badge bg-info">Python</span>
+                    <span class="badge bg-warning">Машинное обучение</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-info">
-        <h3>Портфолио студента</h3>
-        <p>РТУ МИРЭА | Экономический факультет</p>
-        <p>© 2025 Все права защищены</p>
-      </div>
-      <div class="footer-links">
-        <a href="index.html" class="footer-link">Главная</a>
-        <a href="pages/contacts.html" class="footer-link">Контакты</a>
-        <a href="#" class="footer-link">Политика конфиденциальности</a>
-      </div>
+        <!-- About Section -->
+        <section class="mb-5">
+          <div class="card shadow-sm">
+            <div class="card-header bg-light">
+              <h3 class="card-title h5 mb-0">
+                <i class="bi bi-person-circle text-primary me-2"></i>
+                Обо мне
+              </h3>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                Студент 2 курса бакалавриата по направлению "Информационные системы и технологии". 
+                Специализация: Фуллстек разработка. В настоящее время изучаю методы машинного обучения 
+                для экономических прогнозов.
+              </p>
+              <p class="card-text">
+                <strong class="text-primary">В будущем планирую</strong> развивать карьеру в области 
+                экономического консалтинга с фокусом на digital-трансформации компаний.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="mb-5">
+          <div class="card shadow-sm">
+            <div class="card-header bg-light">
+              <h3 class="card-title h5 mb-0">
+                <i class="bi bi-tools text-primary me-2"></i>
+                Профессиональные навыки
+              </h3>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                      <span>Анализ данных</span>
+                      <span class="text-primary">85%</span>
+                    </div>
+                    <div class="progress skill-progress">
+                      <div class="progress-bar bg-primary" style="width: 85%"></div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                      <span>Эконометрика</span>
+                      <span class="text-primary">80%</span>
+                    </div>
+                    <div class="progress skill-progress">
+                      <div class="progress-bar bg-success" style="width: 80%"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                      <span>Python/SQL</span>
+                      <span class="text-primary">90%</span>
+                    </div>
+                    <div class="progress skill-progress">
+                      <div class="progress-bar bg-info" style="width: 90%"></div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                      <span>Английский язык</span>
+                      <span class="text-primary">95%</span>
+                    </div>
+                    <div class="progress skill-progress">
+                      <div class="progress-bar bg-warning" style="width: 95%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="mb-5">
+          <div class="card shadow-sm">
+            <div class="card-header bg-light">
+              <h3 class="card-title h5 mb-0">
+                <i class="bi bi-briefcase text-primary me-2"></i>
+                Опыт работы
+              </h3>
+            </div>
+            <div class="card-body">
+              <div class="experience-timeline">
+                <div class="experience-item">
+                  <h6 class="text-primary">Аналитик данных</h6>
+                  <p class="text-muted small mb-1">Центральный банк РФ | июнь 2024 - август 2024</p>
+                  <p class="mb-0">Анализ финансовой устойчивости банков, разработка моделей прогнозирования рисков.</p>
+                </div>
+                <div class="experience-item">
+                  <h6 class="text-primary">Экономист-исследователь</h6>
+                  <p class="text-muted small mb-1">РТУ МИРЭА, Лаборатория экономических исследований | сентябрь 2023 - май 2024</p>
+                  <p class="mb-0">Оценка эффективности государственных программ поддержки малого бизнеса.</p>
+                </div>
+                <div class="experience-item">
+                  <h6 class="text-primary">Стажер в отделе стратегии</h6>
+                  <p class="text-muted small mb-1">Сбербанк России | июль 2023 - август 2023</p>
+                  <p class="mb-0">Анализ рынка цифровых банковских услуг, исследование потребительского поведения.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-    <div class="copyright">
-      <p>Создано с <i class="fas fa-heart" style="color: #e74c3c;"></i> для учебного проекта</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 footer-wrapper">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0">Институт перспективных технологий и индустриального программирования | РТУ МИРЭА</p>
+          <p class="mb-0 small text-white-50">&copy; 2025 Все права защищены</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="index.html" class="text-white text-decoration-none me-3">Главная</a>
+          <a href="pages/contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+          <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12 text-center">
+          <p class="small text-white-50 mb-0">Создано с <i class="bi bi-heart-fill text-danger"></i> для учебного проекта</p>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <!-- Модальное окно увеличенного фото -->
-  <div class="modal" id="photoModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title">Чувилов Александр Александрович</h3>
-        <button class="modal-close" onclick="closeModal('photoModal')">&times;</button>
-      </div>
-      <div class="modal-body">
-        <div style="text-align: center;">
-          <img src="images/photo.png" alt="Фото Чувилова Александра" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem;">
-          <p><strong>Студент 1 курса магистратуры</strong></p>
-          <p>Направление: "Экономика"</p>
-          <p>Специализация: анализ данных и эконометрика в цифровой экономике</p>
+  <!-- Кнопка переключения темы -->
+  <div class="theme-switcher">
+    <button class="theme-switcher-btn" id="themeToggle">
+      <i class="bi bi-moon" id="themeIcon"></i>
+    </button>
+  </div>
+
+  <!-- Modal для увеличенного фото -->
+  <div class="modal fade" id="photoModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Чувилов Александр Александрович</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="images/photo.png" alt="Фото Чувилова Александра" class="img-fluid rounded mb-3">
+          <p><strong>Студент 2 курса бакалавриата</strong></p>
+          <p>Направление: "Информационные системы и технологии"</p>
+          <p>Специализация: Фуллстек разработка</p>
           <p>Группа: ЭФБО-07-24</p>
         </div>
       </div>
     </div>
   </div>
 
-  <script>
-    // Функции для работы с модальными окнами
-    function openModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    function closeModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-      }
-    }
-
-    // Закрытие модального окна при клике вне его содержимого
-    document.addEventListener('DOMContentLoaded', function() {
-      const modals = document.querySelectorAll('.modal');
-      modals.forEach(modal => {
-        modal.addEventListener('click', function(e) {
-          if (e.target === this) {
-            this.classList.remove('active');
-            document.body.style.overflow = 'auto';
-          }
-        });
-      });
-
-      // Закрытие по клавише Esc
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-          modals.forEach(modal => {
-            if (modal.classList.contains('active')) {
-              modal.classList.remove('active');
-              document.body.style.overflow = 'auto';
-            }
-          });
-        }
-      });
-    });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/theme-switcher.js"></script>
 </body>
 </html>

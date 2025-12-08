@@ -4,216 +4,274 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Новости - Экономический факультет</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="../style/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <header class="site-header">
+<body class="d-flex flex-column min-vh-100">
+  <div class="content-wrapper">
+    <div class="container-fluid p-0">
+      <!-- Header -->
+      <header class="bg-primary text-white py-4">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col">
+              <h1 class="h3 mb-1">Новости экономики</h1>
+              <p class="mb-0 opacity-75">Актуальные события и исследования РТУ МИРЭА</p>
+            </div>
+            <div class="col-auto">
+              <span class="badge bg-light text-primary">МИРЭА</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">
+                  <i class="bi bi-house me-1"></i> Главная
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="news.html">
+                  <i class="bi bi-newspaper me-1"></i> Новости
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="practices.html">
+                  <i class="bi bi-briefcase me-1"></i> Практики
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="goods.html">
+                  <i class="bi bi-cart me-1"></i> Товары
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacts.html">
+                  <i class="bi bi-telephone me-1"></i> Контакты
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="container my-4">
+        <!-- Header Section -->
+        <section class="mb-5 text-center">
+          <h2 class="text-primary mb-3">Последние новости</h2>
+          <p class="text-muted">Самые свежие события из мира экономики и образования</p>
+        </section>
+
+        <!-- News Grid -->
+        <section class="mb-5">
+          <div class="row g-4">
+            <!-- News 1 -->
+            <div class="col-lg-6">
+              <div class="card h-100 shadow-sm card-hover">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h5 class="card-title text-primary">Запуск новой магистерской программы по цифровой экономике</h5>
+                    <span class="badge bg-primary">Образование</span>
+                  </div>
+                  <div class="d-flex justify-content-between text-muted small mb-3">
+                    <span><i class="bi bi-calendar me-1"></i>15.03.2025</span>
+                    <span><i class="bi bi-person me-1"></i>П.В. Астафьев</span>
+                  </div>
+                  <p class="card-text">
+                    С сентября 2025 года на факультете экономики РТУ МИРЭА стартует новая магистерская программа "Цифровая трансформация и анализ данных".
+                  </p>
+                  <p class="card-text">
+                    Программа разработана совместно с ведущими IT-компаниями и включает уникальные курсы по блокчейн-технологиям, анализу больших данных в экономике и цифровым платформам.
+                  </p>
+                  <div class="mt-3">
+                    <span class="badge bg-secondary me-1">Экономика</span>
+                    <span class="badge bg-secondary">Технологии</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- News 2 -->
+            <div class="col-lg-6">
+              <div class="card h-100 shadow-sm card-hover">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h5 class="card-title text-primary">Студенты РТУ МИРЭА заняли первое место на Всероссийской олимпиаде по эконометрике</h5>
+                    <span class="badge bg-success">Достижения</span>
+                  </div>
+                  <div class="d-flex justify-content-between text-muted small mb-3">
+                    <span><i class="bi bi-calendar me-1"></i>10.03.2025</span>
+                    <span><i class="bi bi-person me-1"></i>П.В. Остафьев</span>
+                  </div>
+                  <p class="card-text">
+                    Команда студентов магистратуры экономического факультета РТУ МИРЭА одержала победу на XV Всероссийской олимпиаде по эконометрике и анализу данных.
+                  </p>
+                  <p class="card-text">
+                    Студенты РТУ МИРЭА показали лучшие результаты в решении практических кейсов по прогнозированию экономических показателей с использованием методов машинного обучения.
+                  </p>
+                  <div class="mt-3">
+                    <span class="badge bg-secondary me-1">Наука</span>
+                    <span class="badge bg-secondary">Образование</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- News 3 -->
+            <div class="col-lg-6">
+              <div class="card h-100 shadow-sm card-hover">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h5 class="card-title text-primary">Открытие лаборатории экспериментальной экономики</h5>
+                    <span class="badge bg-info">Наука</span>
+                  </div>
+                  <div class="d-flex justify-content-between text-muted small mb-3">
+                    <span><i class="bi bi-calendar me-1"></i>05.03.2025</span>
+                    <span><i class="bi bi-person me-1"></i>П.В. Естафьев</span>
+                  </div>
+                  <p class="card-text">
+                    1 марта 2025 года состоялось официальное открытие новой лаборатории экспериментальной экономики на экономическом факультете РТУ МИРЭА.
+                  </p>
+                  <p class="card-text">
+                    Лаборатория оснащена современным оборудованием для проведения поведенческих экспериментов и eye-tracking исследований.
+                  </p>
+                  <div class="mt-3">
+                    <span class="badge bg-secondary me-1">Инновации</span>
+                    <span class="badge bg-secondary">Исследования</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- News 4 -->
+            <div class="col-lg-6">
+              <div class="card h-100 shadow-sm card-hover">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <h5 class="card-title text-primary">Международная конференция "Экономика в эпоху искусственного интеллекта"</h5>
+                    <span class="badge bg-warning">Конференция</span>
+                  </div>
+                  <div class="d-flex justify-content-between text-muted small mb-3">
+                    <span><i class="bi bi-calendar me-1"></i>28.02.2025</span>
+                    <span><i class="bi bi-person me-1"></i>П.В. Астафьев</span>
+                  </div>
+                  <p class="card-text">
+                    20-22 мая 2025 года в Москве пройдет международная конференция "Экономика в эпоху искусственного интеллекта: вызовы и возможности".
+                  </p>
+                  <p class="card-text">
+                    Организаторами выступают РТУ МИРЭА, МГУ и MIT. В конференции примут участие ведущие экономисты мира, включая нобелевских лауреатов.
+                  </p>
+                  <div class="mt-3">
+                    <span class="badge bg-secondary me-1">ИИ</span>
+                    <span class="badge bg-secondary">Международное сотрудничество</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Subscription Section -->
+        <section class="mb-5">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h4 class="card-title text-primary mb-3">
+                <i class="bi bi-rss me-2"></i>
+                Подписка на новости
+              </h4>
+              <p class="card-text mb-4">Будьте в курсе всех событий! Подпишитесь на нашу рассылку.</p>
+              <div class="row g-3">
+                <div class="col-md-8">
+                  <input type="email" class="form-control" id="subscriptionEmail" placeholder="Введите ваш email">
+                </div>
+                <div class="col-md-4">
+                  <button class="btn btn-primary w-100" onclick="handleSubscription(event)">
+                    Подписаться
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 footer-wrapper">
     <div class="container">
-      <h1>Новости экономики</h1>
-      <p>Актуальные события и исследования РТУ МИРЭА</p>
-    </div>
-  </header>
-
-  <nav class="main-nav">
-    <div class="nav-container">
-      <ul class="nav-menu">
-        <li class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a></li>
-        <li class="nav-item"><a href="news.html" class="nav-link active"><i class="fas fa-newspaper"></i> Новости</a></li>
-        <li class="nav-item"><a href="practices.html" class="nav-link"><i class="fas fa-briefcase"></i> Практики</a></li>
-        <li class="nav-item"><a href="goods.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Товары</a></li>
-        <li class="nav-item"><a href="contacts.html" class="nav-link"><i class="fas fa-address-book"></i> Контакты</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main class="main-content">
-    <header class="page-header">
-      <h2>Последние новости</h2>
-      <p>Самые свежие события из мира экономики и образования</p>
-    </header>
-
-    <div class="news-grid grid">
-      <article class="news-card card">
-        <div class="news-header">
-          <h3 class="news-title">Запуск новой магистерской программы по цифровой экономике</h3>
-          <div class="news-meta">
-            <span><i class="far fa-calendar"></i> 15.03.2025</span>
-            <span><i class="far fa-user"></i> П.В. Астафьев</span>
-          </div>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h5 class="mb-2">Экономические новости</h5>
+          <p class="mb-0 small">Институт перспективных технологий и индустриального программирования | РТУ МИРЭА</p>
+          <p class="mb-0 small text-white-50">&copy; 2025 Все права защищены</p>
         </div>
-        <div class="news-content">
-          <p>С сентября 2025 года на факультете экономики РТУ МИРЭА стартует новая магистерская программа "Цифровая трансформация и анализ данных".</p>
-          <p>Программа разработана совместно с ведущими IT-компаниями и включает уникальные курсы по блокчейн-технологиям, анализу больших данных в экономике и цифровым платформам.</p>
+        <div class="col-md-6 text-md-end">
+          <a href="../index.html" class="text-white text-decoration-none me-3">Главная</a>
+          <a href="contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+          <a href="#" class="text-white text-decoration-none">Архив новостей</a>
         </div>
-        <div class="news-tags">
-          <span class="tag tag-primary">Образование</span>
-          <span class="tag">Экономика</span>
-          <span class="tag">Технологии</span>
-        </div>
-      </article>
-
-      <article class="news-card card">
-        <div class="news-header">
-          <h3 class="news-title">Студенты РТУ МИРЭА заняли первое место на Всероссийской олимпиаде по эконометрике</h3>
-          <div class="news-meta">
-            <span><i class="far fa-calendar"></i> 10.03.2025</span>
-            <span><i class="far fa-user"></i> П.В. Остафьев</span>
-          </div>
-        </div>
-        <div class="news-content">
-          <p>Команда студентов магистратуры экономического факультета РТУ МИРЭА одержала победу на XV Всероссийской олимпиаде по эконометрике и анализу данных.</p>
-          <p>Студенты РТУ МИРЭА показали лучшие результаты в решении практических кейсов по прогнозированию экономических показателей с использованием методов машинного обучения.</p>
-        </div>
-        <div class="news-tags">
-          <span class="tag tag-primary">Достижения</span>
-          <span class="tag">Наука</span>
-          <span class="tag">Образование</span>
-        </div>
-      </article>
-
-      <article class="news-card card">
-        <div class="news-header">
-          <h3 class="news-title">Открытие лаборатории экспериментальной экономики</h3>
-          <div class="news-meta">
-            <span><i class="far fa-calendar"></i> 05.03.2025</span>
-            <span><i class="far fa-user"></i> П.В. Естафьев</span>
-          </div>
-        </div>
-        <div class="news-content">
-          <p>1 марта 2025 года состоялось официальное открытие новой лаборатории экспериментальной экономики на экономическом факультете РТУ МИРЭА.</p>
-          <p>Лаборатория оснащена современным оборудованием для проведения поведенческих экспериментов и eye-tracking исследований.</p>
-        </div>
-        <div class="news-tags">
-          <span class="tag tag-primary">Наука</span>
-          <span class="tag">Инновации</span>
-          <span class="tag">Исследования</span>
-        </div>
-      </article>
-
-      <article class="news-card card">
-        <div class="news-header">
-          <h3 class="news-title">Международная конференция "Экономика в эпоху искусственного интеллекта"</h3>
-          <div class="news-meta">
-            <span><i class="far fa-calendar"></i> 28.02.2025</span>
-            <span><i class="far fa-user"></i> П.В. Астафьев</span>
-          </div>
-        </div>
-        <div class="news-content">
-          <p>20-22 мая 2025 года в Москве пройдет международная конференция "Экономика в эпоху искусственного интеллекта: вызовы и возможности".</p>
-          <p>Организаторами выступают РТУ МИРЭА, МГУ и MIT. В конференции примут участие ведущие экономисты мира, включая нобелевских лауреатов.</p>
-        </div>
-        <div class="news-tags">
-          <span class="tag tag-primary">Конференция</span>
-          <span class="tag">ИИ</span>
-          <span class="tag">Международное сотрудничество</span>
-        </div>
-      </article>
-    </div>
-
-    <aside class="card mt-4">
-      <h3><i class="fas fa-rss"></i> Подписка на новости</h3>
-      <p>Будьте в курсе всех событий! Подпишитесь на нашу рассылку.</p>
-      <div class="form-group mt-2">
-        <input type="email" id="subscriptionEmail" class="form-control" placeholder="Введите ваш email">
       </div>
-      <button class="btn btn-primary mt-2" onclick="handleSubscription(event)">Подписаться</button>
-    </aside>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-info">
-        <h3>Экономические новости</h3>
-        <p>РТУ МИРЭА | Экономический факультет</p>
-        <p>© 2025 Все права защищены</p>
+      <div class="row mt-3">
+        <div class="col-12 text-center">
+          <p class="small text-white-50 mb-0">Материалы предоставлены пресс-службой РТУ МИРЭА</p>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="../index.html" class="footer-link">Главная</a>
-        <a href="contacts.html" class="footer-link">Контакты</a>
-        <a href="#" class="footer-link">Архив новостей</a>
-      </div>
-    </div>
-    <div class="copyright">
-      <p>Материалы предоставлены пресс-службой РТУ МИРЭА</p>
     </div>
   </footer>
 
-  <!-- Модальное окно успешной подписки -->
-  <div class="modal" id="subscriptionModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title">Подписка оформлена!</h3>
-        <button class="modal-close" onclick="closeModal('subscriptionModal')">&times;</button>
-      </div>
-      <div class="modal-body subscription-success">
-        <i class="fas fa-envelope-open-text"></i>
-        <h4>Спасибо за подписку!</h4>
-        <p>Теперь вы будете первыми узнавать о самых важных новостях РТУ МИРЭА.</p>
-        <p>Письмо с подтверждением отправлено на ваш email.</p>
-        <button class="btn btn-primary mt-3" onclick="closeModal('subscriptionModal')">Продолжить чтение</button>
+  <!-- Кнопка переключения темы -->
+  <div class="theme-switcher">
+    <button class="theme-switcher-btn" id="themeToggle">
+      <i class="bi bi-moon" id="themeIcon"></i>
+    </button>
+  </div>
+
+  <!-- Subscription Modal -->
+  <div class="modal fade" id="subscriptionModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Подписка оформлена!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <i class="bi bi-envelope-check text-success display-4 mb-3"></i>
+          <h4 class="mb-3">Спасибо за подписку!</h4>
+          <p>Теперь вы будете первыми узнавать о самых важных новостях РТУ МИРЭА.</p>
+          <p>Письмо с подтверждением отправлено на ваш email.</p>
+          <button class="btn btn-primary mt-3" data-bs-dismiss="modal">
+            Продолжить чтение
+          </button>
+        </div>
       </div>
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/theme-switcher.js"></script>
   <script>
-    // Функции для работы с модальными окнами
-    function openModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    function closeModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-      }
-    }
-
-    // Закрытие модального окна при клике вне его содержимого
-    document.addEventListener('DOMContentLoaded', function() {
-      const modals = document.querySelectorAll('.modal');
-      modals.forEach(modal => {
-        modal.addEventListener('click', function(e) {
-          if (e.target === this) {
-            this.classList.remove('active');
-            document.body.style.overflow = 'auto';
-          }
-        });
-      });
-
-      // Закрытие по клавише Esc
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-          modals.forEach(modal => {
-            if (modal.classList.contains('active')) {
-              modal.classList.remove('active');
-              document.body.style.overflow = 'auto';
-            }
-          });
-        }
-      });
-    });
-
-    // Функция для обработки подписки на новости
-    function handleSubscription(e) {
-      e.preventDefault();
+    function handleSubscription(event) {
+      event.preventDefault();
+      const email = document.getElementById('subscriptionEmail').value;
       
-      const emailInput = document.querySelector('#subscriptionEmail');
-      if (emailInput && emailInput.value) {
-        setTimeout(() => {
-          openModal('subscriptionModal');
-          emailInput.value = ''; // Очищаем поле ввода
-        }, 1000);
+      if (email && email.includes('@')) {
+        const modal = new bootstrap.Modal(document.getElementById('subscriptionModal'));
+        modal.show();
+        document.getElementById('subscriptionEmail').value = '';
       } else {
-        alert('Пожалуйста, введите email для подписки');
+        alert('Пожалуйста, введите корректный email адрес');
       }
-      
-      return false;
     }
   </script>
 </body>

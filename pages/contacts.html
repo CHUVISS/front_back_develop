@@ -4,242 +4,315 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Контакты - Связь с нами</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="../style/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Контакты</h1>
-      <p>Свяжитесь с нами для сотрудничества</p>
-    </div>
-  </header>
-
-  <nav class="main-nav">
-    <div class="nav-container">
-      <ul class="nav-menu">
-        <li class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a></li>
-        <li class="nav-item"><a href="news.html" class="nav-link"><i class="fas fa-newspaper"></i> Новости</a></li>
-        <li class="nav-item"><a href="practices.html" class="nav-link"><i class="fas fa-briefcase"></i> Практики</a></li>
-        <li class="nav-item"><a href="goods.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Товары</a></li>
-        <li class="nav-item"><a href="contacts.html" class="nav-link active"><i class="fas fa-address-book"></i> Контакты</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main class="main-content">
-    <header class="page-header">
-      <h2>Свяжитесь с нами</h2>
-      <p>Мы всегда рады ответить на ваши вопросы о РТУ МИРЭА</p>
-    </header>
-
-    <div class="contact-grid grid">
-      <article class="contact-card card">
-        <div class="contact-icon">
-          <i class="fas fa-envelope"></i>
-        </div>
-        <div class="contact-info">
-          <h3>Электронная почта</h3>
-          <p>example@mail.ru</p>
-          <p>support@mirea.ru</p>
-          <p class="mt-2">Ответ в течение 24 часов</p>
-        </div>
-      </article>
-
-      <article class="contact-card card">
-        <div class="contact-icon">
-          <i class="fas fa-phone"></i>
-        </div>
-        <div class="contact-info">
-          <h3>Телефон</h3>
-          <p>+7 (900) 123-45-67</p>
-          <p>+7 (495) 987-65-43</p>
-          <p class="mt-2">Пн-Пт: 9:00-18:00</p>
-        </div>
-      </article>
-
-      <article class="contact-card card">
-        <div class="contact-icon">
-          <i class="fas fa-map-marker-alt"></i>
-        </div>
-        <div class="contact-info">
-          <h3>Адрес РТУ МИРЭА</h3>
-          <p>г. Москва, пр. Вернадского, д. 78</p>
-          <p>РТУ МИРЭА, корпус А</p>
-          <p class="mt-2">Экономический факультет, каб. 405</p>
-          <button class="btn btn-secondary mt-2" onclick="openModal('mapModal')">
-            <i class="fas fa-map"></i> Показать на карте
-          </button>
-        </div>
-      </article>
-
-      <article class="contact-card card">
-        <div class="contact-icon">
-          <i class="fas fa-share-alt"></i>
-        </div>
-        <div class="contact-info">
-          <h3>Социальные сети</h3>
-          <div class="mt-2">
-            <a href="#" class="footer-link"><i class="fab fa-vk"></i> VK РТУ МИРЭА</a><br>
-            <a href="#" class="footer-link"><i class="fab fa-telegram"></i> Telegram канал</a><br>
-            <a href="#" class="footer-link"><i class="fab fa-youtube"></i> YouTube университета</a>
+<body class="d-flex flex-column min-vh-100">
+  <div class="content-wrapper">
+    <div class="container-fluid p-0">
+      <!-- Header -->
+      <header class="bg-primary text-white py-4">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col">
+              <h1 class="h3 mb-1">Контакты</h1>
+              <p class="mb-0 opacity-75">Свяжитесь с нами для сотрудничества</p>
+            </div>
+            <div class="col-auto">
+              <span class="badge bg-light text-primary">МИРЭА</span>
+            </div>
           </div>
         </div>
-      </article>
-    </div>
+      </header>
 
-    <section class="card mt-4">
-      <h3><i class="fas fa-paper-plane"></i> Форма обратной связи</h3>
-      <form class="contact-form" onsubmit="return handleContactForm(event)">
-        <div class="form-group">
-          <label for="name" class="form-label">Ваше имя</label>
-          <input type="text" id="name" class="form-control" placeholder="Введите ваше имя" required>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">
+                  <i class="bi bi-house me-1"></i> Главная
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="news.html">
+                  <i class="bi bi-newspaper me-1"></i> Новости
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="practices.html">
+                  <i class="bi bi-briefcase me-1"></i> Практики
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="goods.html">
+                  <i class="bi bi-cart me-1"></i> Товары
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contacts.html">
+                  <i class="bi bi-telephone me-1"></i> Контакты
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        
-        <div class="form-group">
-          <label for="email" class="form-label">Электронная почта</label>
-          <input type="email" id="email" class="form-control" placeholder="example@mail.ru" required>
-        </div>
-        
-        <div class="form-group">
-          <label for="subject" class="form-label">Тема сообщения</label>
-          <select id="subject" class="form-control" required>
-            <option value="">Выберите тему</option>
-            <option value="question">Вопрос по обучению в РТУ МИРЭА</option>
-            <option value="cooperation">Сотрудничество с университетом</option>
-            <option value="material">Вопрос по учебным материалам</option>
-            <option value="other">Другое</option>
-          </select>
-        </div>
-        
-        <div class="form-group">
-          <label for="message" class="form-label">Сообщение</label>
-          <textarea id="message" class="form-control" rows="5" placeholder="Введите ваше сообщение..." required></textarea>
-        </div>
-        
-        <button type="submit" class="btn btn-primary">Отправить сообщение</button>
-      </form>
-    </section>
-  </main>
+      </nav>
 
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-info">
-        <h3>Контакты</h3>
-        <p>РТУ МИРЭА | Экономический факультет</p>
-        <p>© 2025 Все права защищены</p>
-      </div>
-      <div class="footer-links">
-        <a href="../index.html" class="footer-link">Главная</a>
-        <a href="goods.html" class="footer-link">Товары</a>
-        <a href="#" class="footer-link">Карта сайта</a>
-      </div>
+      <!-- Main Content -->
+      <main class="container my-4">
+        <!-- Header Section -->
+        <section class="mb-5 text-center">
+          <h2 class="text-primary mb-3">Свяжитесь с нами</h2>
+          <p class="text-muted">Мы всегда рады ответить на ваши вопросы о РТУ МИРЭА</p>
+        </section>
+
+        <!-- Contact Cards -->
+        <section class="mb-5">
+          <div class="row g-4">
+            <!-- Email -->
+            <div class="col-lg-3 col-md-6">
+              <div class="card h-100 shadow-sm card-hover">
+                <div class="card-body text-center">
+                  <i class="bi bi-envelope contact-icon mb-3"></i>
+                  <h5 class="card-title text-primary">Электронная почта</h5>
+                  <p class="card-text mb-1">example@mail.ru</p>
+                  <p class="card-text mb-3">support@mirea.ru</p>
+                  <p class="card-text text-muted small">Ответ в течение 24 часов</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="col-lg-3 col-md-6">
+              <div class="card h-100 shadow-sm card-hover">
+                <div class="card-body text-center">
+                  <i class="bi bi-telephone contact-icon mb-3"></i>
+                  <h5 class="card-title text-primary">Телефон</h5>
+                  <p class="card-text mb-1">+7 (900) 123-45-67</p>
+                  <p class="card-text mb-3">+7 (495) 987-65-43</p>
+                  <p class="card-text text-muted small">Пн-Пт: 9:00-18:00</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="col-lg-3 col-md-6">
+              <div class="card h-100 shadow-sm card-hover">
+                <div class="card-body text-center">
+                  <i class="bi bi-geo-alt contact-icon mb-3"></i>
+                  <h5 class="card-title text-primary">Адрес РТУ МИРЭА</h5>
+                  <p class="card-text mb-1">г. Москва, пр. Вернадского, д. 78</p>
+                  <p class="card-text mb-2">РТУ МИРЭА, корпус А</p>
+                  <p class="card-text text-muted small mb-3">Экономический факультет, каб. 405</p>
+                  <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#mapModal">
+                    <i class="bi bi-map me-1"></i> Показать на карте
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Networks -->
+            <div class="col-lg-3 col-md-6">
+              <div class="card h-100 shadow-sm card-hover">
+                <div class="card-body text-center">
+                  <i class="bi bi-share contact-icon mb-3"></i>
+                  <h5 class="card-title text-primary">Социальные сети</h5>
+                  <div class="d-flex flex-column align-items-start mt-3">
+                    <a href="#" class="social-link">
+                      <i class="bi bi-vimeo"></i> VK РТУ МИРЭА
+                    </a>
+                    <a href="#" class="social-link">
+                      <i class="bi bi-telegram"></i> Telegram канал
+                    </a>
+                    <a href="#" class="social-link">
+                      <i class="bi bi-youtube"></i> YouTube университета
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Form Card -->
+        <section class="mb-5">
+          <div class="card shadow-sm clickable-card" data-bs-toggle="modal" data-bs-target="#contactFormModal">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-envelope-paper text-primary fs-3 me-3"></i>
+                  <div>
+                    <h4 class="card-title mb-1">Форма обратной связи</h4>
+                    <p class="card-text text-muted mb-0">Нажмите, чтобы открыть форму для отправки сообщения</p>
+                  </div>
+                </div>
+                <i class="bi bi-chevron-right text-muted fs-4"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-    <div class="copyright">
-      <p>Время работы: Понедельник-Пятница, 9:00-18:00. Приёмная комиссия РТУ МИРЭА: +7 (495) 957-91-91</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 footer-wrapper">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h5 class="mb-2">Контакты</h5>
+          <p class="mb-0 small">Институт перспективных технологий и индустриального программирования | РТУ МИРЭА</p>
+          <p class="mb-0 small text-white-50">&copy; 2025 Все права защищены</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="../index.html" class="text-white text-decoration-none me-3">Главная</a>
+          <a href="goods.html" class="text-white text-decoration-none me-3">Товары</a>
+          <a href="#" class="text-white text-decoration-none">Карта сайта</a>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12 text-center">
+          <p class="small text-white-50 mb-0">Время работы: Понедельник-Пятница, 9:00-18:00. Приёмная комиссия РТУ МИРЭА: +7 (495) 957-91-91</p>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <!-- Модальное окно успешной отправки формы -->
-  <div class="modal" id="successModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title">Сообщение отправлено!</h3>
-        <button class="modal-close" onclick="closeModal('successModal')">&times;</button>
-      </div>
-      <div class="modal-body form-success">
-        <i class="fas fa-check-circle"></i>
-        <h4>Спасибо за ваше сообщение!</h4>
-        <p>Мы получили ваше обращение и ответим вам в ближайшее время.</p>
-        <p>Обычно мы отвечаем в течение 24 часов.</p>
-        <button class="btn btn-primary mt-3" onclick="closeModal('successModal')">Закрыть</button>
+  <!-- Кнопка переключения темы -->
+  <div class="theme-switcher">
+    <button class="theme-switcher-btn" id="themeToggle">
+      <i class="bi bi-moon" id="themeIcon"></i>
+    </button>
+  </div>
+
+  <!-- Contact Form Modal -->
+  <div class="modal fade" id="contactFormModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            <i class="bi bi-envelope-paper text-primary me-2"></i>
+            Форма обратной связи
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="contactForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Ваше имя</label>
+              <input type="text" class="form-control" id="name" placeholder="Введите ваше имя" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="email" class="form-label">Электронная почта</label>
+              <input type="email" class="form-control" id="email" placeholder="example@mail.ru" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="subject" class="form-label">Тема сообщения</label>
+              <select class="form-select" id="subject" required>
+                <option value="">Выберите тему</option>
+                <option value="question">Вопрос по обучению в РТУ МИРЭА</option>
+                <option value="cooperation">Сотрудничество с университетом</option>
+                <option value="material">Вопрос по учебным материалам</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+            
+            <div class="mb-4">
+              <label for="message" class="form-label">Сообщение</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Введите ваше сообщение..." required></textarea>
+            </div>
+            
+            <div class="d-flex justify-content-end gap-2">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+              <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Модальное окно карты -->
-  <div class="modal" id="mapModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title">Адрес РТУ МИРЭА на карте</h3>
-        <button class="modal-close" onclick="closeModal('mapModal')">&times;</button>
+  <!-- Success Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Сообщение отправлено!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <i class="bi bi-check-circle text-success display-4 mb-3"></i>
+          <h4 class="mb-3">Спасибо за ваше сообщение!</h4>
+          <p>Мы получили ваше обращение и ответим вам в ближайшее время.</p>
+          <p>Обычно мы отвечаем в течение 24 часов.</p>
+          <button class="btn btn-primary mt-3" data-bs-dismiss="modal">Закрыть</button>
+        </div>
       </div>
-      <div class="modal-body">
-        <div style="width: 100%; height: 400px; background: #f5f5f5; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-          <div style="text-align: center; color: #666;">
-            <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 1rem; color: #0056b3;"></i>
-            <p>г. Москва, пр. Вернадского, д. 78</p>
-            <p>РТУ МИРЭА, корпус А</p>
-            <p class="mt-2"><small>Экономический факультет, кабинет 405</small></p>
+    </div>
+  </div>
+
+  <!-- Map Modal -->
+  <div class="modal fade" id="mapModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Адрес РТУ МИРЭА на карте</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="bg-light rounded p-5 text-center mb-4">
+            <i class="bi bi-geo-alt-fill text-primary display-1 mb-3"></i>
+            <p class="fs-5 mb-1">г. Москва, пр. Вернадского, д. 78</p>
+            <p class="mb-1">РТУ МИРЭА, корпус А</p>
+            <p class="text-muted">Экономический факультет, кабинет 405</p>
+          </div>
+          <div class="text-center">
+            <a href="https://yandex.ru/maps/-/CDqZ7TTS" target="_blank" class="btn btn-primary">
+              <i class="bi bi-box-arrow-up-right me-2"></i> Открыть в Яндекс.Картах
+            </a>
           </div>
         </div>
-        <div class="text-center">
-          <a href="https://yandex.ru/maps/-/CDqZ7TTS" target="_blank" class="btn btn-primary">
-            <i class="fas fa-external-link-alt"></i> Открыть в Яндекс.Картах
-          </a>
-        </div>
       </div>
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/theme-switcher.js"></script>
   <script>
-    // Функции для работы с модальными окнами
-    function openModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    function closeModal(modalId) {
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-      }
-    }
-
-    // Закрытие модального окна при клике вне его содержимого
-    document.addEventListener('DOMContentLoaded', function() {
-      const modals = document.querySelectorAll('.modal');
-      modals.forEach(modal => {
-        modal.addEventListener('click', function(e) {
-          if (e.target === this) {
-            this.classList.remove('active');
-            document.body.style.overflow = 'auto';
-          }
-        });
-      });
-
-      // Закрытие по клавише Esc
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-          modals.forEach(modal => {
-            if (modal.classList.contains('active')) {
-              modal.classList.remove('active');
-              document.body.style.overflow = 'auto';
-            }
-          });
-        }
-      });
-    });
-
-    // Функция для обработки формы обратной связи
-    function handleContactForm(e) {
-      e.preventDefault();
+    // Обработчик формы обратной связи
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
       
-      // Отправка формы на сервер
+      // Здесь можно добавить логику отправки данных на сервер
+      // Например, сбор данных формы:
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      
+      console.log('Отправка формы:', { name, email, subject, message });
+      
+      // Закрываем модальное окно с формой
+      const contactModal = bootstrap.Modal.getInstance(document.getElementById('contactFormModal'));
+      contactModal.hide();
+      
+      // Показываем окно успеха
       setTimeout(() => {
-        openModal('successModal');
-        
-        // Сброс формы
-        const form = document.querySelector('.contact-form');
-        if (form) form.reset();
-      }, 1000);
+        const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+        successModal.show();
+      }, 300);
       
-      return false;
-    }
+      // Очищаем форму
+      document.getElementById('contactForm').reset();
+    });
   </script>
 </body>
 </html>

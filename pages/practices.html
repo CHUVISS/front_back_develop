@@ -4,141 +4,264 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Практики - Учебный опыт</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="../style/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <header class="site-header">
+<body class="d-flex flex-column min-vh-100">
+  <div class="content-wrapper">
+    <div class="container-fluid p-0">
+      <!-- Header -->
+      <header class="bg-primary text-white py-4">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col">
+              <h1 class="h3 mb-1">Учебные практики</h1>
+              <p class="mb-0 opacity-75">Опыт и профессиональное развитие РТУ МИРЭА</p>
+            </div>
+            <div class="col-auto">
+              <span class="badge bg-light text-primary">МИРЭА</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">
+                  <i class="bi bi-house me-1"></i> Главная
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="news.html">
+                  <i class="bi bi-newspaper me-1"></i> Новости
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="practices.html">
+                  <i class="bi bi-briefcase me-1"></i> Практики
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="goods.html">
+                  <i class="bi bi-cart me-1"></i> Товары
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacts.html">
+                  <i class="bi bi-telephone me-1"></i> Контакты
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="container my-4">
+        <!-- Header Section -->
+        <section class="mb-5 text-center">
+          <h2 class="text-primary mb-3">Мои учебные практики</h2>
+          <p class="text-muted">Профессиональный опыт и навыки, полученные во время обучения в РТУ МИРЭА</p>
+        </section>
+
+        <!-- Practices List -->
+        <section class="mb-5">
+          <!-- Practice 1 - НАУЧНО-ИССЛЕДОВАТЕЛЬСКАЯ ПРАКТИКА -->
+          <div class="card shadow-sm mb-4 card-hover">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-2 text-center mb-3 mb-md-0">
+                  <div class="practice-icon mx-auto">
+                    <i class="bi bi-flask"></i>
+                  </div>
+                </div>
+                <div class="col-md-10">
+                  <h4 class="card-title text-primary">Научно-исследовательская практика</h4>
+                  <div class="d-flex flex-wrap gap-3 text-muted small mb-3">
+                    <span><i class="bi bi-calendar me-1"></i>Сентябрь 2024 - Декабрь 2024</span>
+                    <span><i class="bi bi-building me-1"></i>РТУ МИРЭА</span>
+                  </div>
+                  <p class="card-text">
+                    Проходила на кафедре экономической теории РТУ МИРЭА под руководством профессора Иванова А.И. 
+                    Тема исследования: "Анализ эффективности цифровых платформ для малого бизнеса в период экономических санкций".
+                  </p>
+                  <p class="card-text mt-3">
+                    <strong class="text-primary">Результат:</strong> Подготовлена научная статья для журнала "Вопросы экономики", 
+                    разработана модель прогнозирования адаптационного потенциала предприятий.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Practice 2 -->
+          <div class="card shadow-sm mb-4 card-hover">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-2 text-center mb-3 mb-md-0">
+                  <div class="practice-icon mx-auto">
+                    <i class="bi bi-graph-up"></i>
+                  </div>
+                </div>
+                <div class="col-md-10">
+                  <h4 class="card-title text-primary">Производственная практика</h4>
+                  <div class="d-flex flex-wrap gap-3 text-muted small mb-3">
+                    <span><i class="bi bi-calendar me-1"></i>Июнь 2024 - Август 2024</span>
+                    <span><i class="bi bi-bank me-1"></i>Центральный банк РФ</span>
+                  </div>
+                  <p class="card-text">
+                    Практика в Департаменте стратегического анализа Центрального банка РФ. 
+                    Участие в проекте по анализу устойчивости банковской системы к киберрискам.
+                  </p>
+                  <p class="card-text mt-3">
+                    <strong class="text-primary">Результат:</strong> Разработана методика оценки киберрисков для банков разного масштаба, 
+                    рекомендации вошли в проект новых нормативных документов ЦБ.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Practice 3 -->
+          <div class="card shadow-sm mb-4 card-hover">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-2 text-center mb-3 mb-md-0">
+                  <div class="practice-icon mx-auto">
+                    <i class="bi bi-mortarboard"></i>
+                  </div>
+                </div>
+                <div class="col-md-10">
+                  <h4 class="card-title text-primary">Педагогическая практика</h4>
+                  <div class="d-flex flex-wrap gap-3 text-muted small mb-3">
+                    <span><i class="bi bi-calendar me-1"></i>Февраль 2024 - Май 2024</span>
+                    <span><i class="bi bi-person-standing-dress me-1"></i>РТУ МИРЭА</span>
+                  </div>
+                  <p class="card-text">
+                    Проведение семинаров по курсу "Эконометрика" для студентов 2 курса бакалавриата РТУ МИРЭА. 
+                    Разработка учебных материалов, проведение консультаций, проверка домашних заданий.
+                  </p>
+                  <p class="card-text mt-3">
+                    <strong class="text-primary">Результат:</strong> Разработаны интерактивные учебные материалы, 
+                    которые были рекомендованы кафедрой для использования в следующем учебном году.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Practice 4 -->
+          <div class="card shadow-sm card-hover">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-2 text-center mb-3 mb-md-0">
+                  <div class="practice-icon mx-auto">
+                    <i class="bi bi-globe"></i>
+                  </div>
+                </div>
+                <div class="col-md-10">
+                  <h4 class="card-title text-primary">Международная стажировка</h4>
+                  <div class="d-flex flex-wrap gap-3 text-muted small mb-3">
+                    <span><i class="bi bi-calendar me-1"></i>Январь 2024</span>
+                    <span><i class="bi bi-airplane me-1"></i>Берлинский университет</span>
+                  </div>
+                  <p class="card-text">
+                    Краткосрочная стажировка в Берлинском университете по программе обмена РТУ МИРЭА. 
+                    Участие в исследованиях по сравнительному анализу экономических систем ЕС и России.
+                  </p>
+                  <p class="card-text mt-3">
+                    <strong class="text-primary">Результат:</strong> Подготовлен аналитический отчет "Перспективы цифровой экономики в странах ЕС", 
+                    выступление на международной студенческой конференции.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section class="mb-5">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h4 class="card-title text-primary mb-4">
+                <i class="bi bi-award me-2"></i>
+                Сертификаты и достижения
+              </h4>
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="card h-100 border-0 bg-light">
+                    <div class="card-body text-center">
+                      <i class="bi bi-patch-check-fill certificate-icon mb-3"></i>
+                      <h5 class="card-title">Data Science Specialization</h5>
+                      <p class="card-text text-muted small">Coursera, 2024</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card h-100 border-0 bg-light">
+                    <div class="card-body text-center">
+                      <i class="bi bi-patch-check-fill certificate-icon mb-3"></i>
+                      <h5 class="card-title">Эконометрика продвинутый уровень</h5>
+                      <p class="card-text text-muted small">РТУ МИРЭА, 2023</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card h-100 border-0 bg-light">
+                    <div class="card-body text-center">
+                      <i class="bi bi-patch-check-fill certificate-icon mb-3"></i>
+                      <h5 class="card-title">Бизнес-английский C1</h5>
+                      <p class="card-text text-muted small">Cambridge, 2023</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 footer-wrapper">
     <div class="container">
-      <h1>Учебные практики</h1>
-      <p>Опыт и профессиональное развитие РТУ МИРЭА</p>
-    </div>
-  </header>
-
-  <nav class="main-nav">
-    <div class="nav-container">
-      <ul class="nav-menu">
-        <li class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a></li>
-        <li class="nav-item"><a href="news.html" class="nav-link"><i class="fas fa-newspaper"></i> Новости</a></li>
-        <li class="nav-item"><a href="practices.html" class="nav-link active"><i class="fas fa-briefcase"></i> Практики</a></li>
-        <li class="nav-item"><a href="goods.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Товары</a></li>
-        <li class="nav-item"><a href="contacts.html" class="nav-link"><i class="fas fa-address-book"></i> Контакты</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main class="main-content">
-    <header class="page-header">
-      <h2>Мои учебные практики</h2>
-      <p>Профессиональный опыт и навыки, полученные во время обучения в РТУ МИРЭА</p>
-    </header>
-
-    <div class="practices-container">
-      <article class="practice-card">
-        <div class="practice-icon">
-          <i class="fas fa-flask"></i>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h5 class="mb-2">Учебные практики</h5>
+          <p class="mb-0 small">Институт перспективных технологий и индустриального программирования | РТУ МИРЭА</p>
+          <p class="mb-0 small text-white-50">&copy; 2025 Все права защищены</p>
         </div>
-        <div class="practice-content">
-          <h3 class="practice-title">Научно-исследовательская практика</h3>
-          <div class="practice-meta">
-            <span><i class="far fa-calendar"></i> Сентябрь 2024 - Декабрь 2024</span>
-            <span><i class="fas fa-university"></i> РТУ МИРЭА</span>
-          </div>
-          <p>Проходила на кафедре экономической теории РТУ МИРЭА под руководством профессора Иванова А.И. Тема исследования: "Анализ эффективности цифровых платформ для малого бизнеса в период экономических санкций".</p>
-          <p class="mt-2"><strong>Результат:</strong> Подготовлена научная статья для журнала "Вопросы экономики", разработана модель прогнозирования адаптационного потенциала предприятий.</p>
-        </div>
-      </article>
-
-      <article class="practice-card">
-        <div class="practice-icon">
-          <i class="fas fa-chart-line"></i>
-        </div>
-        <div class="practice-content">
-          <h3 class="practice-title">Производственная практика</h3>
-          <div class="practice-meta">
-            <span><i class="far fa-calendar"></i> Июнь 2024 - Август 2024</span>
-            <span><i class="fas fa-building"></i> Центральный банк РФ</span>
-          </div>
-          <p>Практика в Департаменте стратегического анализа Центрального банка РФ. Участие в проекте по анализу устойчивости банковской системы к киберрискам.</p>
-          <p class="mt-2"><strong>Результат:</strong> Разработана методика оценки киберрисков для банков разного масштаба, рекомендации вошли в проект новых нормативных документов ЦБ.</p>
-        </div>
-      </article>
-
-      <article class="practice-card">
-        <div class="practice-icon">
-          <i class="fas fa-chalkboard-teacher"></i>
-        </div>
-        <div class="practice-content">
-          <h3 class="practice-title">Педагогическая практика</h3>
-          <div class="practice-meta">
-            <span><i class="far fa-calendar"></i> Февраль 2024 - Май 2024</span>
-            <span><i class="fas fa-user-graduate"></i> РТУ МИРЭА</span>
-          </div>
-          <p>Проведение семинаров по курсу "Эконометрика" для студентов 2 курса бакалавриата РТУ МИРЭА. Разработка учебных материалов, проведение консультаций, проверка домашних заданий.</p>
-          <p class="mt-2"><strong>Результат:</strong> Разработаны интерактивные учебные материалы, которые были рекомендованы кафедрой для использования в следующем учебном году.</p>
-        </div>
-      </article>
-
-      <article class="practice-card">
-        <div class="practice-icon">
-          <i class="fas fa-globe"></i>
-        </div>
-        <div class="practice-content">
-          <h3 class="practice-title">Международная стажировка</h3>
-          <div class="practice-meta">
-            <span><i class="far fa-calendar"></i> Январь 2024</span>
-            <span><i class="fas fa-plane"></i> Берлинский университет</span>
-          </div>
-          <p>Краткосрочная стажировка в Берлинском университете по программе обмена РТУ МИРЭА. Участие в исследованиях по сравнительному анализу экономических систем ЕС и России.</p>
-          <p class="mt-2"><strong>Результат:</strong> Подготовлен аналитический отчет "Перспективы цифровой экономики в странах ЕС", выступление на международной студенческой конференции.</p>
-        </div>
-      </article>
-    </div>
-
-    <aside class="card mt-4">
-      <h3><i class="fas fa-award"></i> Сертификаты и достижения</h3>
-      <div class="skills-grid grid-3 mt-2">
-        <div class="skill-card">
-          <div class="skill-icon"><i class="fas fa-certificate"></i></div>
-          <div>
-            <h4>Data Science Specialization</h4>
-            <p>Coursera, 2024</p>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon"><i class="fas fa-certificate"></i></div>
-          <div>
-            <h4>Эконометрика продвинутый уровень</h4>
-            <p>РТУ МИРЭА, 2023</p>
-          </div>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon"><i class="fas fa-certificate"></i></div>
-          <div>
-            <h4>Бизнес-английский C1</h4>
-            <p>Cambridge, 2023</p>
-          </div>
+        <div class="col-md-6 text-md-end">
+          <a href="../index.html" class="text-white text-decoration-none me-3">Главная</a>
+          <a href="news.html" class="text-white text-decoration-none me-3">Новости</a>
+          <a href="contacts.html" class="text-white text-decoration-none">Контакты</a>
         </div>
       </div>
-    </aside>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-info">
-        <h3>Учебные практики</h3>
-        <p>РТУ МИРЭА | Экономический факультет</p>
-        <p>© 2025 Все права защищены</p>
+      <div class="row mt-3">
+        <div class="col-12 text-center">
+          <p class="small text-white-50 mb-0">Документы по практикам доступны по запросу в деканате РТУ МИРЭА</p>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="../index.html" class="footer-link">Главная</a>
-        <a href="news.html" class="footer-link">Новости</a>
-        <a href="contacts.html" class="footer-link">Контакты</a>
-      </div>
-    </div>
-    <div class="copyright">
-      <p>Документы по практикам доступны по запросу в деканате РТУ МИРЭА</p>
     </div>
   </footer>
+
+  <!-- Кнопка переключения темы -->
+  <div class="theme-switcher">
+    <button class="theme-switcher-btn" id="themeToggle">
+      <i class="bi bi-moon" id="themeIcon"></i>
+    </button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/theme-switcher.js"></script>
 </body>
 </html>
